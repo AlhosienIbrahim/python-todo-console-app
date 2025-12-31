@@ -44,7 +44,7 @@ def add_task(tasks_list):
         date_list = date.split('-')
         if len(date_list[0]) < 4 or len(date_list[0]) > 4\
                 or len(date_list[1]) > 2 or float(date_list[1]) > 12\
-                or len(date_list[-1]) > 2 or float(date_list[-1]) > 30:
+                or len(date_list[-1]) > 2 or float(date_list[-1]) > 31:
             print('Invalid Date, Please enter date in correct format (yyyy-mm-dd)')
             return
         for mission in tasks_list:
@@ -92,4 +92,5 @@ def view_tasks(tasks_list):
         print('Your tasks list is empty')
 # call main function
 if __name__ == '__main__':
+
     main(tasks)
